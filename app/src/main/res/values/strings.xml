@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">ReadCampus</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">R校园</string>
+    <string name="title_bookCity">书城</string>
+    <string name="title_bookShelf">书架</string>
+    <string name="title_bookCircle">校园圈</string>
+    <string name="title_my">我的</string>
 </resources>

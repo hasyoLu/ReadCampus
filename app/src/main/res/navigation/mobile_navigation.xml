@@ -3,23 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_bookCity">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.readcampus.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_bookCity"
+        android:name="com.example.readcampus.ui.bookCity.BookCityFragment"
+        android:label="@string/title_bookCity"
+        tools:layout="@layout/main_fragment_bookcity" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.readcampus.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_bookshelf"
+        android:name="com.example.readcampus.ui.bookShelf.BookShelfFragment"
+        android:label="@string/title_bookShelf"
+        tools:layout="@layout/main_fragment_bookshelf" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.readcampus.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_bookCircle"
+        android:name="com.example.readcampus.ui.bookCircle.BookCircleFragment"
+        android:label="@string/title_bookCircle"
+        tools:layout="@layout/main_fragment_bookcircle" />
+
+    <fragment
+        android:id="@+id/navigation_my"
+        android:name="com.example.readcampus.ui.my.MyFragment"
+        android:label="@string/title_my"
+        tools:layout="@layout/main_fragment_my" />
+
 </navigation>
