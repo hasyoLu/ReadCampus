@@ -3,13 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_bookCity">
+    app:startDestination="@+id/navigation_library">
 
     <fragment
-        android:id="@+id/navigation_bookCity"
-        android:name="com.example.readcampus.ui.bookCity.BookCityFragment"
+        android:id="@+id/navigation_library"
+        android:name="com.example.readcampus.ui.library.LibraryFragment"
         android:label="@string/title_bookCity"
-        tools:layout="@layout/main_fragment_bookcity" />
+        tools:layout="@layout/main_fragment_library" >
+        <action
+            android:id="@+id/action_navigation_library_to_bookCityFragment"
+            app:destination="@id/navigation_bookCity" />
+        <action
+            android:id="@+id/action_navigation_library_to_searchFragment"
+            app:destination="@id/navigation_search" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_bookshelf"
@@ -28,5 +35,21 @@
         android:name="com.example.readcampus.ui.my.MyFragment"
         android:label="@string/title_my"
         tools:layout="@layout/main_fragment_my" />
+
+    <fragment
+        android:id="@+id/navigation_bookCity"
+        android:name="com.example.readcampus.ui.bookCity.BookCityFragment"
+        android:label="fragment_book_city_list"
+        tools:layout="@layout/fragment_book_city_list" >
+        <action
+            android:id="@+id/action_navigation_bookCity_to_searchFragment"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.readcampus.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 
 </navigation>

@@ -1,22 +1,25 @@
-package com.example.readcampus.ui.bookCircle
+package com.example.readcampus.ui.bookCity
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
-import com.example.readcampus.databinding.BookcircleItemBinding
 
 import com.example.readcampus.placeholder.PlaceholderContent.PlaceholderItem
-import com.example.readcampus.databinding.MainFragmentBookcircleBinding
+import com.example.readcampus.databinding.FragmentBookCityBinding
 
-class MyBookCircleRecyclerViewAdapter(
+/**
+ * [RecyclerView.Adapter] that can display a [PlaceholderItem].
+ * TODO: Replace the implementation with code for your data type.
+ */
+class MyBookItemRecyclerViewAdapter(
     private val values: List<PlaceholderItem>
-) : RecyclerView.Adapter<MyBookCircleRecyclerViewAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<MyBookItemRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         return ViewHolder(
-            BookcircleItemBinding.inflate(
+            FragmentBookCityBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -33,7 +36,7 @@ class MyBookCircleRecyclerViewAdapter(
 
     override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(binding:BookcircleItemBinding) :
+    inner class ViewHolder(binding: FragmentBookCityBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val idView: TextView = binding.itemNumber
         val contentView: TextView = binding.content
