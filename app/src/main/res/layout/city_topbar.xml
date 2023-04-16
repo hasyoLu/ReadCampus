@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    >
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#2E8E8B8B"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ic_search"
+                android:layout_alignParentStart="true"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_search"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/ic_search"
+                android:text="@string/topBar_text"
+                android:textColor="#1E1D1D"
+                android:textSize="16sp"
+                android:layout_marginStart="6dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/topbar_ic_bookcity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="@string/title_bookCity"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginStart="6dp"
+                android:layout_gravity="bottom"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#BCBCBC"
+                android:layout_toStartOf="@id/topbar_ic_bookcity"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.youth.banner.Banner
+        android:layout_margin ="8dp"
+        android:id="@+id/topbar_banner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+</LinearLayout>

@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_bookCity"
-        android:icon="@drawable/ic_main_bookcity"
+        android:id="@+id/navigation_library"
+        android:icon="@drawable/ic_main_library"
         android:title="@string/title_bookCity" />
 
     <item
