@@ -1,12 +1,13 @@
 package com.example.readcampus
 
+import android.Manifest
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.readcampus.databinding.ActivityMainBinding
 
@@ -33,5 +34,19 @@ class MainActivity : AppCompatActivity() {
         )
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //申请权限
+        requestPermission()
+    }
+    private fun requestPermission(){
+        //权限要求
+        val permission = registerForActivityResult(ActivityResultContracts.RequestPermission()){
+            if(!it) {
+                Toast.makeText(this, "请开通相关权限，否则无法正常使用本应用！", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        //申请权限
+        permission.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
     }
 }

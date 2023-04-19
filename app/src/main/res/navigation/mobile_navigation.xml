@@ -38,9 +38,9 @@
 
     <fragment
         android:id="@+id/navigation_bookCity"
-        android:name="com.example.readcampus.ui.bookCity.BookCityFragment"
-        android:label="fragment_book_city_list"
-        tools:layout="@layout/fragment_book_city_list" >
+        android:name="com.example.readcampus.ui.bookCity.SquareFragment"
+        android:label="书城"
+        tools:layout="@layout/fragment_square" >
         <action
             android:id="@+id/action_navigation_bookCity_to_searchFragment"
             app:destination="@id/navigation_search" />
