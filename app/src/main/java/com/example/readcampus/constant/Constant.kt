@@ -1,5 +1,6 @@
 package com.example.readcampus.constant
 
+import com.example.readcampus.base.BaseApplication
 import com.example.readcampus.utils.FileUtil
 import java.io.File
 import java.util.regex.Pattern
@@ -46,9 +47,9 @@ object Constant {
     const val MAX_LENGTH_WITH_NO_CHAPTER = 10 * 1024
 
     //BookCachePath (因为getCachePath引用了Context，所以必须是静态变量，不能够是静态常量)
-//    @kotlin.jvm.JvmField
-//    var BOOK_CACHE_PATH: String = (FileUtil.getDownloadPath() + File.separator
-//            + "free_novel" + File.separator)
+    @kotlin.jvm.JvmField
+    var BOOK_CACHE_PATH: String = (BaseApplication.getContext()?.cacheDir?.absolutePath ?:"" + File.separator
+            + "free_novel" + File.separator)
 
     // "序(章)|前言"
     @kotlin.jvm.JvmField

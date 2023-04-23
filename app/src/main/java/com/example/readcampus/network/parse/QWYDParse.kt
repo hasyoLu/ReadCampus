@@ -1,6 +1,5 @@
 package com.example.readcampus.network.parse
 
-import android.provider.DocumentsContract
 import com.example.readcampus.bean.BookBean
 import com.example.readcampus.bean.BookShopInfo
 import com.example.readcampus.bean.ChapterBean

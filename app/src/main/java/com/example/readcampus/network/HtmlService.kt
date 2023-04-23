@@ -39,9 +39,10 @@ class HtmlService {
 
 
     /**
+     * TODO
      * 请求
      */
-    private fun get(url: String,head: Map<String,String>): String? {
+    private fun get(url: String, head: Map<String,String>): String? {
         val client = OkHttpClient()
         val requestBuilder = Request.Builder()
             .removeHeader("User-Agent")
@@ -52,7 +53,7 @@ class HtmlService {
         val request = requestBuilder.url(url)
             .build()
         val response = client.newCall(request).execute()
-        return response.body()?.string()
+        return response.body?.string()
     }
 
     /**
@@ -74,6 +75,6 @@ class HtmlService {
             .post(formBodyBuilder.build())
             .build()
         val response = client.newCall(request).execute()
-        return response.body()?.string()
+        return response.body?.string()
     }
 }

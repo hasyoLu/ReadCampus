@@ -10,4 +10,7 @@
 
     <color name="main_color">#3B8848</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="authCode">#3689AF</color>
+    <color name="authCodeAfter">#CEC5BBBB</color>
 </resources>
