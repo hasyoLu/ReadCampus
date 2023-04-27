@@ -3,8 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_library">
-
+    app:startDestination="@+id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.readcampus.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_library"
+            app:destination="@id/navigation_library" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_library"
         android:name="com.example.readcampus.ui.library.LibraryFragment"
@@ -38,9 +45,9 @@
 
     <fragment
         android:id="@+id/navigation_bookCity"
-        android:name="com.example.readcampus.ui.bookCity.BookCityFragment"
-        android:label="fragment_book_city_list"
-        tools:layout="@layout/fragment_book_city_list" >
+        android:name="com.example.readcampus.ui.bookCity.SquareFragment"
+        android:label="书城"
+        tools:layout="@layout/fragment_square" >
         <action
             android:id="@+id/action_navigation_bookCity_to_searchFragment"
             app:destination="@id/navigation_search" />
@@ -51,5 +58,11 @@
         android:name="com.example.readcampus.ui.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.readcampus.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
 
 </navigation>
